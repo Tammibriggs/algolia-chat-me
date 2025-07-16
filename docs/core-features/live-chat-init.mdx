@@ -1,0 +1,42 @@
+---
+title: "Live Chat Initialization"
+description: "Start a live chat using initChat(config). Includes outdated and updated usage."
+category: "Core Features"
+---
+
+# Live Chat Initialization
+
+Start a live chat session with your users.
+
+## Outdated Usage
+
+Previously, you started a chat with just a token:
+
+```js
+sdk.initChat('YOUR_API_TOKEN');
+```
+
+## Updated Usage
+
+Now, you must pass a config object:
+
+```js
+sdk.initChat({
+  token: 'YOUR_API_TOKEN',
+  userId: 'USER_ID', // Optional
+});
+```
+
+- `token`: Required API token
+- `userId`: Optional user identifier for tracking
+
+### Example Use Case
+- Start a chat for a logged-in user with their ID
+
+### Edge Cases
+- If `userId` is missing, chat will still start but user tracking is disabled
+- Passing a string instead of an object will throw an error
+
+---
+
+**See also:** [Quick Setup](../getting-started/quick-setup.mdx), [Bot Customization](./bot-customization.mdx)

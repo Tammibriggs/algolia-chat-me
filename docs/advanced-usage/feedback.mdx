@@ -1,0 +1,38 @@
+---
+title: "Collecting Feedback"
+description: "How to collect user feedback with requestRating(). Previously enableFeedbackPrompt()."
+category: "Advanced Usage"
+---
+
+# Collecting Feedback
+
+Gather user ratings and feedback after a chat session.
+
+## New Method: `requestRating()`
+
+```js
+sdk.requestRating();
+```
+
+- Prompts the user for a rating (e.g., stars, thumbs up/down)
+- Can be triggered at the end of a chat or on demand
+
+## Previously: `enableFeedbackPrompt()`
+
+```js
+// Deprecated
+sdk.enableFeedbackPrompt();
+```
+
+- Old method, now replaced by `requestRating()`
+
+### Example Use Case
+- Ask for feedback after resolving a support ticket
+
+### Edge Cases
+- If called multiple times, only the latest prompt is shown
+- Works with both live and automated chat sessions
+
+---
+
+**See also:** [Live Chat Init](../core-features/live-chat-init.mdx)

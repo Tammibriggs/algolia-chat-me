@@ -1,0 +1,56 @@
+[
+  {
+    "objectID": "advanced-usage-feedback",
+    "title": "Collecting Feedback",
+    "description": "How to collect user feedback with requestRating(). Previously enableFeedbackPrompt().",
+    "content": "\n# Collecting Feedback\n\nGather user ratings and feedback after a chat session.\n\n## New Method: `requestRating()`\n\n```js\nsdk.requestRating();\n```\n\n- Prompts the user for a rating (e.g., stars, thumbs up/down)\n- Can be triggered at the end of a chat or on demand\n\n## Previously: `enableFeedbackPrompt()`\n\n```js\n// Deprecated\nsdk.enableFeedbackPrompt();\n```\n\n- Old method, now replaced by `requestRating()`\n\n### Example Use Case\n- Ask for feedback after resolving a support ticket\n\n### Edge Cases\n- If called multiple times, only the latest prompt is shown\n- Works with both live and automated chat sessions\n\n---\n\n**See also:** [Live Chat Init](../core-features/live-chat-init.mdx)\n",
+    "category": "advanced-usage",
+    "tags": [],
+    "url": "/docs/advanced-usage/feedback"
+  },
+  {
+    "objectID": "advanced-usage-history-control",
+    "title": "History Control",
+    "description": "How to hide chat logs and stop session logging with disableHistory().",
+    "content": "\n# History Control\n\nControl whether chat sessions are logged for future reference.\n\n## Disable Session Logging\n\nUse `disableHistory()` to prevent chat logs from being saved.\n\n```js\nsdk.disableHistory();\n```\n\n- No chat history will be stored for the current session\n- Useful for privacy-sensitive conversations\n\n### Example Use Cases\n- Hide chat logs for confidential support\n- Temporary sessions that shouldn't be tracked\n\n### Edge Cases\n- Once disabled, cannot be re-enabled for the same session\n- Does not affect previous sessions\n\n---\n\n**See also:** [Collecting Feedback](./feedback.mdx)\n",
+    "category": "advanced-usage",
+    "tags": [],
+    "url": "/docs/advanced-usage/history-control"
+  },
+  {
+    "objectID": "core-features-bot-customization",
+    "title": "Bot Customization",
+    "description": "Customize the chatbot persona using setBotPersona(name, tone).",
+    "content": "\n# Bot Customization\n\nPersonalize your chatbot to match your brand or use case.\n\n## Set Bot Persona\n\nUse `setBotPersona(name, tone)` to change the bot's name and conversational style.\n\n```js\nsdk.setBotPersona('Ava', 'friendly');\n```\n\n- `name`: Display name for the bot (e.g., \"Ava\", \"SupportBot\")\n- `tone`: Conversational tone (e.g., \"friendly\", \"professional\", \"playful\")\n\n### Example Use Cases\n- Make the bot sound more formal for enterprise support\n- Switch to a playful tone for gaming communities\n\n### Edge Cases\n- If `tone` is omitted, defaults to \"neutral\"\n- Invalid `tone` values will fallback to default\n\n---\n\n**See also:** [Live Chat Init](./live-chat-init.mdx)\n",
+    "category": "core-features",
+    "tags": [],
+    "url": "/docs/core-features/bot-customization"
+  },
+  {
+    "objectID": "core-features-live-chat-init",
+    "title": "Live Chat Initialization",
+    "description": "Start a live chat using initChat(config). Includes outdated and updated usage.",
+    "content": "\n# Live Chat Initialization\n\nStart a live chat session with your users.\n\n## Outdated Usage\n\nPreviously, you started a chat with just a token:\n\n```js\nsdk.initChat('YOUR_API_TOKEN');\n```\n\n## Updated Usage\n\nNow, you must pass a config object:\n\n```js\nsdk.initChat({\n  token: 'YOUR_API_TOKEN',\n  userId: 'USER_ID', // Optional\n});\n```\n\n- `token`: Required API token\n- `userId`: Optional user identifier for tracking\n\n### Example Use Case\n- Start a chat for a logged-in user with their ID\n\n### Edge Cases\n- If `userId` is missing, chat will still start but user tracking is disabled\n- Passing a string instead of an object will throw an error\n\n---\n\n**See also:** [Quick Setup](../getting-started/quick-setup.mdx), [Bot Customization](./bot-customization.mdx)\n",
+    "category": "core-features",
+    "tags": [],
+    "url": "/docs/core-features/live-chat-init"
+  },
+  {
+    "objectID": "getting-started-installation",
+    "title": "Installation",
+    "description": "Learn how to install and import the ChatMe JavaScript SDK via NPM or CDN.",
+    "content": "\n# Installation\n\nGet up and running with the ChatMe SDK in minutes.\n\n## NPM\n\nInstall via npm:\n\n```bash\nnpm install chatme-sdk\n```\n\nImport in your app:\n\n```js\nimport ChatMe from 'chatme-sdk';\n```\n\n## CDN\n\nAdd the script tag to your HTML:\n\n```html\n<script src=\"https://cdn.chatme.com/sdk/latest.js\"></script>\n```\n\nThe SDK will be available as `window.ChatMe`.\n\n---\n\n**See also:** [Quick Setup](./quick-setup.mdx)\n",
+    "category": "getting-started",
+    "tags": [],
+    "url": "/docs/getting-started/installation"
+  },
+  {
+    "objectID": "getting-started-quick-setup",
+    "title": "Quick Setup",
+    "description": "How to initialize the ChatMe SDK in your client application.",
+    "content": "\n# Quick Setup\n\nInitialize the ChatMe SDK in your app to start using its features.\n\n## Basic Initialization\n\n```js\nconst sdk = new ChatMe({\n  token: 'YOUR_API_TOKEN',\n  userId: 'USER_ID', // Optional, for user tracking\n});\n```\n\n- `token`: Your API token (required)\n- `userId`: Unique user identifier (optional)\n\n## Example Use Case\n\nUse this setup to enable chat, feedback, and more.\n\n---\n\n**See also:** [Installation](./installation.mdx), [Live Chat Init](../core-features/live-chat-init.mdx)\n",
+    "category": "getting-started",
+    "tags": [],
+    "url": "/docs/getting-started/quick-setup"
+  }
+]

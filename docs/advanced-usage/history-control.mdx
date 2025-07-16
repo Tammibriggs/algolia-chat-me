@@ -1,0 +1,32 @@
+---
+title: "History Control"
+description: "How to hide chat logs and stop session logging with disableHistory()."
+category: "Advanced Usage"
+---
+
+# History Control
+
+Control whether chat sessions are logged for future reference.
+
+## Disable Session Logging
+
+Use `disableHistory()` to prevent chat logs from being saved.
+
+```js
+sdk.disableHistory();
+```
+
+- No chat history will be stored for the current session
+- Useful for privacy-sensitive conversations
+
+### Example Use Cases
+- Hide chat logs for confidential support
+- Temporary sessions that shouldn't be tracked
+
+### Edge Cases
+- Once disabled, cannot be re-enabled for the same session
+- Does not affect previous sessions
+
+---
+
+**See also:** [Collecting Feedback](./feedback.mdx)

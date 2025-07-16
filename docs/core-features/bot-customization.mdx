@@ -1,0 +1,32 @@
+---
+title: "Bot Customization"
+description: "Customize the chatbot persona using setBotPersona(name, tone)."
+category: "Core Features"
+---
+
+# Bot Customization
+
+Personalize your chatbot to match your brand or use case.
+
+## Set Bot Persona
+
+Use `setBotPersona(name, tone)` to change the bot's name and conversational style.
+
+```js
+sdk.setBotPersona('Ava', 'friendly');
+```
+
+- `name`: Display name for the bot (e.g., "Ava", "SupportBot")
+- `tone`: Conversational tone (e.g., "friendly", "professional", "playful")
+
+### Example Use Cases
+- Make the bot sound more formal for enterprise support
+- Switch to a playful tone for gaming communities
+
+### Edge Cases
+- If `tone` is omitted, defaults to "neutral"
+- Invalid `tone` values will fallback to default
+
+---
+
+**See also:** [Live Chat Init](./live-chat-init.mdx)
