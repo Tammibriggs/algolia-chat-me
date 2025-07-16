@@ -1,5 +1,5 @@
 {
-  "name": "algolia-hackathon-doc",
+  "name": "algolia-chat-me",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,7 +16,8 @@
     "next": "15.3.5",
     "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-instantsearch": "^7.16.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
