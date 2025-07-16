@@ -6,16 +6,18 @@ class ChatMe {
     this.token = token;
     this.userId = userId || null;
     this.historyEnabled = true;
-    this.botPersona = { name: 'ChatMeBot', tone: 'neutral' };
+    this.botPersona = { name: "ChatMeBot", tone: "neutral" };
   }
 
-  setBotPersona(name, tone = 'neutral') {
+  setBotPersona(name, tone = "neutral") {
     this.botPersona = { name, tone };
   }
 
   initChat(config) {
-    if (typeof config === 'string') {
-      throw new Error('initChat now requires a config object: { token, userId }');
+    if (typeof config === "string") {
+      throw new Error(
+        "initChat now requires a config object: { token, userId }"
+      );
     }
     this.token = config.token;
     this.userId = config.userId || null;
@@ -25,7 +27,7 @@ class ChatMe {
 
   requestRating() {
     // Simulate feedback prompt
-    return 'Feedback prompt shown';
+    return "Feedback prompt shown";
   }
 
   disableHistory() {
@@ -35,12 +37,12 @@ class ChatMe {
   // Deprecated method for demo
   enableFeedbackPrompt() {
     // Simulate deprecated feedback prompt
-    return 'Deprecated feedback prompt shown';
+    return "Deprecated feedback prompt shown";
   }
 }
 
 // Export for both browser and Node.js
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   window.ChatMe = ChatMe;
 }
 

@@ -8,23 +8,12 @@ category: "Advanced Usage"
 
 Gather user ratings and feedback after a chat session.
 
-## New Method: `requestRating()`
-
 ```js
 sdk.requestRating();
 ```
 
 - Prompts the user for a rating (e.g., stars, thumbs up/down)
 - Can be triggered at the end of a chat or on demand
-
-## Previously: `enableFeedbackPrompt()`
-
-```js
-// Deprecated
-sdk.enableFeedbackPrompt();
-```
-
-- Old method, now replaced by `requestRating()`
 
 ### Example Use Case
 - Ask for feedback after resolving a support ticket

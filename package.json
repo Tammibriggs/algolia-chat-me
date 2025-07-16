@@ -1,5 +1,5 @@
 {
-  "name": "algolia-hackathon-doc",
+  "name": "algolia-chat-me",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-algolia-index": "tsx lib/algolia.ts"
+    "generate-algolia-index": "node lib/algolia.js"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
@@ -16,7 +16,10 @@
     "next": "15.3.5",
     "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-instantsearch": "^7.16.1",
+    "remark": "^15.0.1",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -30,5 +33,6 @@
     "ts-node": "^10.9.2",
     "tsx": "^4.20.3",
     "typescript": "^5"
-  }
+  },
+  "type": "module"
 }
