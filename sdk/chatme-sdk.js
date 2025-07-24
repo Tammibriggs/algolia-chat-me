@@ -6,18 +6,20 @@ class ChatMe {
     this.token = token;
     this.userId = userId || null;
     this.historyEnabled = true;
-    this.botPersona = { name: "ChatMeBot", tone: "neutral" };
+    this.botPersona = {
+      name: "ChatMeBot",
+      tone: "neutral",
+      description: "AI BOT",
+    };
   }
 
-  setBotPersona(name, tone = "neutral") {
-    this.botPersona = { name, tone };
+  setBotPersona(name, tone = "neutral", description) {
+    this.botPersona = { name, tone, description };
   }
 
-  initChat(config) {
+  init(config) {
     if (typeof config === "string") {
-      throw new Error(
-        "initChat now requires a config object: { token, userId }"
-      );
+      throw new Error("init now requires a config object: { token, userId }");
     }
     this.token = config.token;
     this.userId = config.userId || null;
