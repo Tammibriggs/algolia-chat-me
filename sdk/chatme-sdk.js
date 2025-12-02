@@ -13,7 +13,7 @@ class ChatMe {
     };
   }
 
-  setBotPersona(name, tone = "neutral", description) {
+  setBotPersonel(name, tone = "neutral", description) {
     this.botPersona = { name, tone, description };
   }
 
